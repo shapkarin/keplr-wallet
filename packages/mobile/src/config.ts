@@ -1765,6 +1765,41 @@ export const EmbedChainInfos: AppChainInfo[] = [
     features: ["ibc-transfer", "ibc-go"],
     hideInUI: true,
   },
+  {
+    rpc: "https://grpc.bd.evmos.org:9090",
+    rest: "https://rest.bd.evmos.org:1317",
+    chainId: "evmos_9001-2",
+    chainName: "EVMOS",
+    stakeCurrency: {
+      coinDenom: "EVMOS",
+      coinMinimalDenom: "aevmos",
+      coinDecimals: 18,
+    },
+    bip44: {
+      coinType: 60,
+    },
+    bech32Config: Bech32Address.defaultBech32Config("evmos"),
+    currencies: [
+      {
+        coinDenom: "EVMOS",
+        coinMinimalDenom: "aevmos",
+        coinDecimals: 18,
+      },
+    ],
+    feeCurrencies: [
+      {
+        coinDenom: "EVMOS",
+        coinMinimalDenom: "aevmos",
+        coinDecimals: 18,
+      },
+    ],
+    gasPriceStep: {
+      low: 20000000000,
+      average: 25000000000,
+      high: 40000000000,
+    },
+    chainSymbolImageUrl: "",
+  },
 ];
 
 export const AmplitudeApiKey = "dbcaf47e30aae5b712bda7f892b2f0c4";
